@@ -26,14 +26,14 @@ export default function Recorder() {
 
   return (
     <div className="recorder">
-      {!recording ? <button onClick={start}>⏺ Start Recording</button> : <button onClick={stop}>⏹ Stop</button>}
+      {!recording ? <button onClick={start}>⏺ 녹음 시작</button> : <button onClick={stop}>⏹ 녹음 중지</button>}
       {url && (
         <>
           <audio controls src={url} />
-          <a href={url} download="recording.webm">Download</a>
+          <a href={url} download="recording.webm">다운로드</a>
         </>
       )}
-      <p className="hint">Play piano/drums while recording to capture audio.</p>
+      <p className="hint">녹음 중 피아노/드럼을 연주하면 소리가 함께 저장됩니다.</p>
     </div>
   );
 }

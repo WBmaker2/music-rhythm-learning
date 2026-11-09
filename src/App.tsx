@@ -17,8 +17,8 @@ export default function App() {
       <header className="topbar">
         <button className="brand" onClick={() => setMode('home')}>🎵 Rhythm Learn</button>
         <nav>
-          {(['piano','drums','rhythm','melody','record','progress','settings'] as Mode[]).map(m => (
-            <button key={m} className={mode===m?'active':''} onClick={()=>setMode(m)}>{m}</button>
+          {([['piano','피아노'],['drums','드럼'],['rhythm','리듬'],['melody','멜로디'],['record','녹음'],['progress','진행도'],['settings','설정']] as [Mode,string][]).map(([m,label]) => (
+            <button key={m} className={mode===m?'active':''} onClick={()=>setMode(m)}>{label}</button>
           ))}
         </nav>
       </header>

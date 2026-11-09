@@ -147,26 +147,26 @@ export default function RhythmGame() {
         </select>
         {!playing ? <button onClick={start} className="btn-pulse">Start</button> : <button onClick={stop}>Stop</button>}
       </div>
-      <canvas ref={canvasRef} width={480} height={400} aria-label="Rhythm game canvas" role="img" />
+      <canvas ref={canvasRef} width={480} height={400} aria-label="리듬 게임 캔버스" role="img" />
       <div className="score" aria-live="polite">
-        Hits: {stats.hits}/{stats.total} | Combo: {stats.combo} | Max: {stats.maxCombo} | Score: {stats.score}
-        {stats.lastJudgment && <span> — {stats.lastJudgment}</span>}
+        맞춘 수: {stats.hits}/{stats.total} | 콤보: {stats.combo} | 최대: {stats.maxCombo} | 점수: {stats.score}
+        {stats.lastJudgment && <span> — {stats.lastJudgment === "Perfect" ? "퍼펙트" : stats.lastJudgment === "Good" ? "굿" : "미스"}</span>}
       </div>
       {stats.finished && (
         <div className="result-overlay">
           <div className="result-card">
-            <h3>Result</h3>
-            <p>Accuracy: {accuracyPct}%</p>
-            <p>Max Combo: {stats.maxCombo}</p>
-            <p>Score: {stats.score}</p>
+            <h3>결과</h3>
+            <p>정확도: {accuracyPct}%</p>
+            <p>최대 콤보: {stats.maxCombo}</p>
+            <p>점수: {stats.score}</p>
             <div className="rhythm-controls">
-              <button onClick={start}>Retry</button>
-              <button onClick={() => setStats(s => ({ ...s, finished: false }))}>Close</button>
+              <button onClick={start}>다시 시도</button>
+              <button onClick={() => setStats(s => ({ ...s, finished: false }))}>닫기</button>
             </div>
           </div>
         </div>
       )}
-      <p className="hint">Use keys A S D F G H J K L ; for lanes.</p>
+      <p className="hint">레인 조작 키: A S D F G H J K L ;</p>
     </div>
   );
 }

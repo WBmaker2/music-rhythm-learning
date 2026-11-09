@@ -1,9 +1,9 @@
 import { playDrum } from '../audio/engine';
 
 const PADS: { k: 'kick'|'snare'|'hihat'; label: string }[] = [
-  { k: 'kick', label: 'Kick' },
-  { k: 'snare', label: 'Snare' },
-  { k: 'hihat', label: 'Hi-Hat' },
+  { k: 'kick', label: '킥' },
+  { k: 'snare', label: '스네어' },
+  { k: 'hihat', label: '하이햇' },
 ];
 
 export default function Drums() {
@@ -14,9 +14,9 @@ export default function Drums() {
           {p.label}
         </button>
       ))}
-      <button className="drum-pad" onPointerDown={(e)=>{e.preventDefault(); playDrum('kick');}}>Kick2</button>
-      <button className="drum-pad" onPointerDown={(e)=>{e.preventDefault(); playDrum('snare');}}>Snare2</button>
-      <button className="drum-pad" onPointerDown={(e)=>{e.preventDefault(); playDrum('hihat');}}>Hat2</button>
+      <button className="drum-pad" onPointerDown={(e)=>{e.preventDefault(); playDrum('kick');}}>킥2</button>
+      <button className="drum-pad" onPointerDown={(e)=>{e.preventDefault(); playDrum('snare');}}>스네어2</button>
+      <button className="drum-pad" onPointerDown={(e)=>{e.preventDefault(); playDrum('hihat');}}>하이햇2</button>
     </div>
   );
 }

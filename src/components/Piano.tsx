@@ -52,7 +52,7 @@ export default function Piano() {
           </button>
         ))}
       </div>
-      <p className="hint">Touch keys or use A W S E D F T G Y H U J (one octave)</p>
+      <p className="hint">건반을 터치하거나 키보드(A W S E D F T G Y H U J)를 사용하세요 (한 옥타브)</p>
     </div>
   );
 }

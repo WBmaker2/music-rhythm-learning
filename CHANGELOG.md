@@ -1,6 +1,13 @@
-# Changelog
+# 변경 기록
+
+## 0.2.0 - 2026-11-05
+
+### 추가
+- 화면 및 안내 문구 한국어화
+- 멜로디/진행도/리듬 게임 고도화
+- 테스트, 접근성, PWA
 
 ## 0.1.0 - 2026-11-05
 
-### Added
-- Initial app: piano, drums, rhythm game, recorder, settings, progress
+### 추가
+- 초기 앱: 피아노, 드럼, 리듬 게임, 녹음, 설정, 진행도

@@ -24,18 +24,18 @@ export default function Settings() {
 
   return (
     <div className="settings">
-      <label>Timbre
+      <label>음색
         <select value={timbre} onChange={e => { const v = e.target.value as Timbre; setT(v); setTimbre(v); save({ timbre: v }); }}>
-          <option value="sine">Sine</option>
-          <option value="square">Square</option>
-          <option value="sawtooth">Sawtooth</option>
-          <option value="triangle">Triangle</option>
+          <option value="sine">사인파</option>
+          <option value="square">스퀘어</option>
+          <option value="sawtooth">소투스</option>
+          <option value="triangle">트라이앵글</option>
         </select>
       </label>
-      <label>Volume
+      <label>볼륨
         <input type="range" min={0} max={1} step={0.01} value={volume} onChange={e => { const v = Number(e.target.value); setV(v); setVolume(v); save({ volume: v }); }} />
       </label>
-      <label>BPM (metronome default)
+      <label>BPM (메트로놈 기본값)
         <input type="number" min={40} max={240} value={bpm} onChange={e => { const v = Number(e.target.value); setBpm(v); save({ bpm: v }); }} />
       </label>
     </div>

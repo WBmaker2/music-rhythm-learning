@@ -81,10 +81,10 @@ export default function Melody() {
         <select value={patternId} onChange={e => setPatternId(e.target.value)} disabled={playing}>
           {PATTERNS.map(p => <option key={p.id} value={p.id}>{p.name} ({p.bpm} BPM)</option>)}
         </select>
-        {!playing ? <button onClick={play} className="btn-pulse">Play</button> : <button onClick={stop}>Stop</button>}
+        {!playing ? <button onClick={play} className="btn-pulse">재생</button> : <button onClick={stop}>정지</button>}
       </div>
       <canvas ref={canvasRef} width={640} height={200} aria-label="Melody sheet" role="img" />
-      <p className="hint">Notes are placed by pitch (vertical) and time (horizontal).</p>
+      <p className="hint">음표는 음높이(세로)와 시간(가로)에 따라 배치됩니다.</p>
     </div>
   );
 }
