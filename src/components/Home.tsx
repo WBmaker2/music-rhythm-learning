@@ -63,7 +63,7 @@ export default function Home({ go }: { go: (m: Mode) => void }) {
           <div className="modal" onClick={e => e.stopPropagation()}>
             <h2>업데이트 내역</h2>
             {loading && <p>불러오는 중...</p>}
-            <div style={{ maxHeight: '60vh', overflow: 'auto', textAlign: 'left' }}>
+            <div style={{ maxHeight: '60vh', overflow: 'auto', textAlign: 'left', paddingBottom: 12 }}>
               {entries.map((e, i) => (
                 <section key={i} style={{ marginBottom: 12 }}>
                   <h3 style={{ margin: '8px 0 4px' }}>{e.date}</h3>
