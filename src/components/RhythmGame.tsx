@@ -145,7 +145,7 @@ export default function RhythmGame() {
         <select value={patternId} onChange={e => setPatternId(e.target.value)} disabled={playing}>
           {PATTERNS.map(p => <option key={p.id} value={p.id}>{p.name} ({p.bpm} BPM)</option>)}
         </select>
-        {!playing ? <button onClick={start} className="btn-pulse">Start</button> : <button onClick={stop}>Stop</button>}
+        {!playing ? <button onClick={start} className="btn-pulse">시작</button> : <button onClick={stop}>중지</button>}
       </div>
       <canvas ref={canvasRef} width={480} height={400} aria-label="리듬 게임 캔버스" role="img" />
       <div className="score" aria-live="polite">
